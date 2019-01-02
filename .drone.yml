@@ -1,0 +1,76 @@
+#
+# Copyright © 2017 Sven Ruppert (sven.ruppert@gmail.com)
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+
+workspace:
+  base: /drone/src
+  path: vaadin-testbench-ng
+
+pipeline:
+  build:
+    image: ${JDK_VERSION}
+    secrets: [tb_license, browserstack_username, browserstack_key, saucelabs_username, saucelabs_key]
+    pull: true
+    commands:
+      - export SAUCELABS_BUILD=vaadin-addons-$DRONE_BUILD_NUMBER
+      - echo -n "$TB_LICENSE" > /root/vaadin.testbench.developer.license
+      - mkdir /root/.m2
+      - mkdir /root/.testbenchextensions
+      - cp /drone/src/vaadin-testbench-ng/_data/nexus/settings.xml /root/.m2/settings.xml
+      - cp /drone/src/vaadin-testbench-ng/_data/testbenchextensions/config-drone.properties /root/.testbenchextensions/config.properties
+      - echo "compattesting.grid.browserstack.username=$BROWSERSTACK_USERNAME" >> /root/.testbenchextensions/config.properties
+      - echo "compattesting.grid.browserstack.key=$BROWSERSTACK_KEY" >> /root/.testbenchextensions/config.properties
+      - echo "compattesting.grid.saucelabs.username=$SAUCELABS_USERNAME" >> /root/.testbenchextensions/config.properties
+      - echo "compattesting.grid.saucelabs.key=$SAUCELABS_KEY" >> /root/.testbenchextensions/config.properties
+      - mvn clean --batch-mode
+      - mvn test --batch-mode
+
+  deploy:
+    image: ${JDK_VERSION}
+    pull: true
+    commands:
+      - echo -n "$TB_LICENSE" > /root/vaadin.testbench.developer.license
+      - mkdir /root/.m2
+      - mkdir /root/.testbenchextensions
+      - cp /drone/src/vaadin-testbench-ng/_data/nexus/settings.xml /root/.m2/settings.xml
+      - mvn deploy
+    when:
+        matrix:
+          JDK_VERSION: svenruppert/maven-3.5-jdk-08
+        branches:
+          include: develop, release/*
+          exclude: feature/*
+
+
+matrix:
+  JDK_VERSION:
+#  - svenruppert/maven-3.5-jdk-08
+#  - svenruppert/maven-3.5-jdk-openjdk-09
+  - svenruppert/maven-3.5-jdk-openjdk-10
+#  - svenruppert/maven-3.5-jdk-openjdk-11
+##  - svenruppert/maven-3.5-jdk-openjdk-shenandoah-08
+##  - svenruppert/maven-3.5-jdk-openjdk-shenandoah-09
+  - svenruppert/maven-3.5-jdk-openjdk-shenandoah-10
+#  - svenruppert/maven-3.5-jdk-graalvm-ce-01
+#  - svenruppert/maven-3.5-jdk-oracle-08
+  - svenruppert/maven-3.5-jdk-oracle-10
+#  - svenruppert/maven-3.5-jdk-oracle-11
+#  - svenruppert/maven-3.5-jdk-zulu-08
+#  - svenruppert/maven-3.5-jdk-zulu-09
+  - svenruppert/maven-3.5-jdk-zulu-10
+#  - svenruppert/maven-3.5-jdk-ibm-08
+#  - maven:3.5-ibmjava-8-alpine
+#  - maven:3.5-ibmjava-9-alpine
+  

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <parent>
+    <artifactId>rapidpm-junit5-ext-servlet-container</artifactId>
+    <groupId>org.rapidpm</groupId>
+    <version>01.00.00-RPM</version>
+  </parent>
+  <modelVersion>4.0.0</modelVersion>
+
+  <artifactId>rapidpm-junit5-ext-servlet-container-impl</artifactId>
+  <packaging>pom</packaging>
+  <modules>
+    <module>meecrowave</module>
+    <module>none</module>
+    <module>tserver</module>
+    <module>spring-boot-v1</module>
+    <module>spring-boot-v2</module>
+  </modules>
+
+
+  <dependencies>
+    <dependency>
+      <groupId>org.rapidpm</groupId>
+      <artifactId>rapidpm-junit5-ext-servlet-container-api</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>com.google.auto.service</groupId>
+      <artifactId>auto-service</artifactId>
+    </dependency>
+
+  </dependencies>
+
+</project>
