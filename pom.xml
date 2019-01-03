@@ -87,8 +87,8 @@
 
     <!--Initializer-->
     <meecrowave.version>1.2.4</meecrowave.version>
-    <spring-boot.version>1.5.9.RELEASE</spring-boot.version>
-    <spring-boot2.version>2.0.3.RELEASE</spring-boot2.version>
+    <spring-boot.version>1.5.18.RELEASE</spring-boot.version>
+    <spring-boot2.version>2.1.1.RELEASE</spring-boot2.version>
     <addon-test-helpers.version>2.0</addon-test-helpers.version>
     <javax.servlet-api.version>4.0.1</javax.servlet-api.version>
 
@@ -98,6 +98,7 @@
   <modules>
     <module>api</module>
     <module>impl</module>
+    <module>test</module>
   </modules>
 
   <dependencyManagement>
@@ -107,6 +108,22 @@
         <artifactId>rapidpm-junit5-ext-servlet-container-api</artifactId>
         <version>01.00.00-RPM</version>
       </dependency>
+      <dependency>
+        <groupId>org.rapidpm</groupId>
+        <artifactId>rapidpm-junit5-ext-servlet-container-impl-meecrowave</artifactId>
+        <version>01.00.00-RPM</version>
+      </dependency>
+      <dependency>
+        <groupId>org.rapidpm</groupId>
+        <artifactId>rapidpm-junit5-ext-servlet-container-impl-spring-boot-v1</artifactId>
+        <version>01.00.00-RPM</version>
+      </dependency>
+      <dependency>
+        <groupId>org.rapidpm</groupId>
+        <artifactId>rapidpm-junit5-ext-servlet-container-impl-spring-boot-v2</artifactId>
+        <version>01.00.00-RPM</version>
+      </dependency>
+
     </dependencies>
   </dependencyManagement>
 

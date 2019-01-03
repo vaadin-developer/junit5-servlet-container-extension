@@ -23,6 +23,8 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.core.annotation.AnnotationUtils;
 
 import java.lang.reflect.Method;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.function.BiConsumer;
 import java.util.function.Consumer;
@@ -52,9 +54,9 @@ public class SpringBoot2ContainerInitializer implements ContainerInitializer, Ha
     }
     storeClass().apply(context).put(SPRING_BOOT2_APP_CLASS, appClass);
 
-    storeClass().apply(context).put(SPRING_BOOT2_ARGS,
-                                    List.of(springBootConf.args())
-    );
+    final List arrayList = new ArrayList();
+    Collections.addAll(arrayList, springBootConf.args());
+    storeClass().apply(context).put(SPRING_BOOT2_ARGS, arrayList);
 
   }
 

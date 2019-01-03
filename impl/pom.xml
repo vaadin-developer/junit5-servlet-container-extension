@@ -14,9 +14,9 @@
   <modules>
     <module>meecrowave</module>
     <module>none</module>
-    <module>tserver</module>
     <module>spring-boot-v1</module>
     <module>spring-boot-v2</module>
+    <!--<module>tserver</module>-->
   </modules>
 
 

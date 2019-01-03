@@ -3,21 +3,19 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <parent>
-    <artifactId>rapidpm-junit5-ext-servlet-container-impl</artifactId>
+    <artifactId>rapidpm-junit5-ext-servlet-container</artifactId>
     <groupId>org.rapidpm</groupId>
     <version>01.00.00-RPM</version>
   </parent>
   <modelVersion>4.0.0</modelVersion>
 
-  <artifactId>rapidpm-junit5-ext-servlet-container-impl-spring-boot-v1</artifactId>
+  <artifactId>rapidpm-junit5-ext-servlet-container-test</artifactId>
+  <packaging>pom</packaging>
+  <modules>
+    <module>meecrowave</module>
+    <module>spring-boot-v1</module>
+    <module>spring-boot-v2</module>
+  </modules>
 
 
-  <dependencies>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot</artifactId>
-      <version>${spring-boot.version}</version>
-      <scope>provided</scope>
-    </dependency>
-  </dependencies>
 </project>

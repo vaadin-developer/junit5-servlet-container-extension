@@ -1,12 +1,12 @@
 /**
  * Copyright © 2017 Sven Ruppert (sven.ruppert@gmail.com)
- *
+ * <p>
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
+ * <p>
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * <p>
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -19,7 +19,7 @@ public class ContainerInfo {
   private final int port;
   private final String host;
 
-  public ContainerInfo(int port, String host) {
+  public ContainerInfo(int port , String host) {
     super();
     this.port = port;
     this.host = host;
@@ -31,5 +31,13 @@ public class ContainerInfo {
 
   public String getHost() {
     return host;
+  }
+
+  @Override
+  public String toString() {
+    return "ContainerInfo{" +
+           "port=" + port +
+           ", host='" + host + '\'' +
+           '}';
   }
 }

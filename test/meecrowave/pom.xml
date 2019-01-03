@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <parent>
+    <artifactId>rapidpm-junit5-ext-servlet-container-test</artifactId>
+    <groupId>org.rapidpm</groupId>
+    <version>01.00.00-RPM</version>
+  </parent>
+  <modelVersion>4.0.0</modelVersion>
+
+  <artifactId>rapidpm-junit5-ext-servlet-container-test-meecrowave</artifactId>
+
+
+  <dependencies>
+    <dependency>
+      <groupId>org.rapidpm</groupId>
+      <artifactId>rapidpm-junit5-ext-servlet-container-impl-meecrowave</artifactId>
+      <version>01.00.00-RPM</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.meecrowave</groupId>
+      <artifactId>meecrowave-specs-api</artifactId>
+      <version>${meecrowave.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.meecrowave</groupId>
+      <artifactId>meecrowave-core</artifactId>
+      <version>${meecrowave.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.squareup.okhttp3</groupId>
+      <artifactId>okhttp</artifactId>
+      <scope>test</scope>
+      <version>3.12.1</version>
+    </dependency>
+    <!--<dependency>-->
+    <!--<groupId>org.apache.meecrowave</groupId>-->
+    <!--<artifactId>meecrowave-junit</artifactId>-->
+    <!--<version>${meecrowave.version}</version>-->
+    <!--<scope>provided</scope>-->
+    <!--</dependency>-->
+    <dependency>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-web</artifactId>
+      <version>2.11.1</version>
+      <scope>test</scope>
+    </dependency>
+
+  </dependencies>
+
+</project>
