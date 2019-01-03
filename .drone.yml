@@ -29,20 +29,20 @@ pipeline:
       - mvn clean --batch-mode
       - mvn test --batch-mode
 
-  deploy:
-    image: ${JDK_VERSION}
-    pull: true
-    commands:
-      - mkdir /root/.m2
-      - mkdir /root/.testbenchextensions
-      - cp /drone/src/rapidpm-junit5-ext-servlet-container/_data/nexus/settings.xml /root/.m2/settings.xml
-      - mvn deploy
-    when:
-        matrix:
-          JDK_VERSION: svenruppert/maven-3.5-jdk-08
-        branches:
-          include: develop, release/*
-          exclude: feature/*
+#  deploy:
+#    image: ${JDK_VERSION}
+#    pull: true
+#    commands:
+#      - mkdir /root/.m2
+#      - mkdir /root/.testbenchextensions
+#      - cp /drone/src/rapidpm-junit5-ext-servlet-container/_data/nexus/settings.xml /root/.m2/settings.xml
+#      - mvn deploy
+#    when:
+#        matrix:
+#          JDK_VERSION: svenruppert/maven-3.5-jdk-08
+#        branches:
+#          include: develop, release/*
+#          exclude: feature/*
 
 
 matrix:
