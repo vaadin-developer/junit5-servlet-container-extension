@@ -98,38 +98,8 @@
     <module>api</module>
     <module>impl</module>
     <module>test</module>
+    <module>bom</module>
   </modules>
-
-  <dependencyManagement>
-    <dependencies>
-      <dependency>
-        <groupId>org.rapidpm</groupId>
-        <artifactId>rapidpm-junit5-ext-servlet-container-api</artifactId>
-        <version>01.00.02-RPM</version>
-      </dependency>
-      <dependency>
-        <groupId>org.rapidpm</groupId>
-        <artifactId>rapidpm-junit5-ext-servlet-container-impl-meecrowave</artifactId>
-        <version>01.00.02-RPM</version>
-      </dependency>
-      <dependency>
-        <groupId>org.rapidpm</groupId>
-        <artifactId>rapidpm-junit5-ext-servlet-container-impl-spring-boot-v1</artifactId>
-        <version>01.00.02-RPM</version>
-      </dependency>
-      <dependency>
-        <groupId>org.rapidpm</groupId>
-        <artifactId>rapidpm-junit5-ext-servlet-container-impl-spring-boot-v2</artifactId>
-        <version>01.00.02-RPM</version>
-      </dependency>
-      <dependency>
-        <groupId>org.rapidpm</groupId>
-        <artifactId>rapidpm-junit5-commons</artifactId>
-        <version>${rapidpm-junit5-commons.version}</version>
-      </dependency>
-    </dependencies>
-  </dependencyManagement>
-
 
   <dependencies>
     <!--jUnit5 into production-->
@@ -148,6 +118,7 @@
     <dependency>
       <groupId>org.rapidpm</groupId>
       <artifactId>rapidpm-junit5-commons</artifactId>
+      <version>${rapidpm-junit5-commons.version}</version>
     </dependency>
   </dependencies>
 </project>

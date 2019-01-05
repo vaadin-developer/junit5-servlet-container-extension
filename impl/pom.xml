@@ -41,6 +41,7 @@
     <dependency>
       <groupId>org.rapidpm</groupId>
       <artifactId>rapidpm-junit5-ext-servlet-container-api</artifactId>
+      <version>01.00.02-RPM</version>
     </dependency>
 
     <dependency>

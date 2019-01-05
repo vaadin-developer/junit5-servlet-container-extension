@@ -51,4 +51,18 @@
     </snapshotRepository>
   </distributionManagement>
 
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.rapidpm</groupId>
+        <artifactId>rapidpm-junit5-ext-servlet-container-bom</artifactId>
+        <version>01.00.02-RPM</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+
+
 </project>
