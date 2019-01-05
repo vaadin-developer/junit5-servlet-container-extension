@@ -30,7 +30,7 @@
 
   <artifactId>rapidpm-junit5-ext-servlet-container</artifactId>
   <packaging>pom</packaging>
-  <version>01.00.02-RPM-SNAPSHOT</version>
+  <version>01.00.02-RPM</version>
 
 
   <inceptionYear>2017</inceptionYear>
@@ -84,7 +84,6 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-
     <!--Initializer-->
     <meecrowave.version>1.2.4</meecrowave.version>
     <spring-boot.version>1.5.18.RELEASE</spring-boot.version>
@@ -92,7 +91,7 @@
     <addon-test-helpers.version>2.0</addon-test-helpers.version>
     <javax.servlet-api.version>4.0.1</javax.servlet-api.version>
 
-
+    <rapidpm-junit5-commons.version>01.00.01-RPM</rapidpm-junit5-commons.version>
   </properties>
 
   <modules>
@@ -106,24 +105,28 @@
       <dependency>
         <groupId>org.rapidpm</groupId>
         <artifactId>rapidpm-junit5-ext-servlet-container-api</artifactId>
-        <version>01.00.02-RPM-SNAPSHOT</version>
+        <version>01.00.02-RPM</version>
       </dependency>
       <dependency>
         <groupId>org.rapidpm</groupId>
         <artifactId>rapidpm-junit5-ext-servlet-container-impl-meecrowave</artifactId>
-        <version>01.00.02-RPM-SNAPSHOT</version>
+        <version>01.00.02-RPM</version>
       </dependency>
       <dependency>
         <groupId>org.rapidpm</groupId>
         <artifactId>rapidpm-junit5-ext-servlet-container-impl-spring-boot-v1</artifactId>
-        <version>01.00.02-RPM-SNAPSHOT</version>
+        <version>01.00.02-RPM</version>
       </dependency>
       <dependency>
         <groupId>org.rapidpm</groupId>
         <artifactId>rapidpm-junit5-ext-servlet-container-impl-spring-boot-v2</artifactId>
-        <version>01.00.02-RPM-SNAPSHOT</version>
+        <version>01.00.02-RPM</version>
       </dependency>
-
+      <dependency>
+        <groupId>org.rapidpm</groupId>
+        <artifactId>rapidpm-junit5-commons</artifactId>
+        <version>${rapidpm-junit5-commons.version}</version>
+      </dependency>
     </dependencies>
   </dependencyManagement>
 
@@ -140,6 +143,11 @@
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter-params</artifactId>
       <scope>compile</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.rapidpm</groupId>
+      <artifactId>rapidpm-junit5-commons</artifactId>
     </dependency>
   </dependencies>
 </project>

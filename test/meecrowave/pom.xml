@@ -22,7 +22,7 @@
   <parent>
     <artifactId>rapidpm-junit5-ext-servlet-container-test</artifactId>
     <groupId>org.rapidpm</groupId>
-    <version>01.00.02-RPM-SNAPSHOT</version>
+    <version>01.00.02-RPM</version>
   </parent>
   <modelVersion>4.0.0</modelVersion>
 
@@ -33,7 +33,7 @@
     <dependency>
       <groupId>org.rapidpm</groupId>
       <artifactId>rapidpm-junit5-ext-servlet-container-impl-meecrowave</artifactId>
-      <version>01.00.02-RPM-SNAPSHOT</version>
+      <version>01.00.02-RPM</version>
     </dependency>
     <dependency>
       <groupId>org.apache.meecrowave</groupId>
