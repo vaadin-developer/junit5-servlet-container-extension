@@ -22,7 +22,7 @@
   <parent>
     <artifactId>rapidpm-junit5-ext-servlet-container</artifactId>
     <groupId>org.rapidpm</groupId>
-    <version>01.00.02-RPM</version>
+    <version>01.00.03-RPM-SNAPSHOT</version>
   </parent>
   <modelVersion>4.0.0</modelVersion>
 
@@ -34,22 +34,22 @@
       <dependency>
         <groupId>org.rapidpm</groupId>
         <artifactId>rapidpm-junit5-ext-servlet-container-api</artifactId>
-        <version>01.00.02-RPM</version>
+        <version>01.00.03-RPM-SNAPSHOT</version>
       </dependency>
       <dependency>
         <groupId>org.rapidpm</groupId>
         <artifactId>rapidpm-junit5-ext-servlet-container-impl-meecrowave</artifactId>
-        <version>01.00.02-RPM</version>
+        <version>01.00.03-RPM-SNAPSHOT</version>
       </dependency>
       <dependency>
         <groupId>org.rapidpm</groupId>
         <artifactId>rapidpm-junit5-ext-servlet-container-impl-spring-boot-v1</artifactId>
-        <version>01.00.02-RPM</version>
+        <version>01.00.03-RPM-SNAPSHOT</version>
       </dependency>
       <dependency>
         <groupId>org.rapidpm</groupId>
         <artifactId>rapidpm-junit5-ext-servlet-container-impl-spring-boot-v2</artifactId>
-        <version>01.00.02-RPM</version>
+        <version>01.00.03-RPM-SNAPSHOT</version>
       </dependency>
       <dependency>
         <groupId>org.rapidpm</groupId>

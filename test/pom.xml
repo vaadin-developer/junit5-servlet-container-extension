@@ -22,7 +22,7 @@
   <parent>
     <artifactId>rapidpm-junit5-ext-servlet-container</artifactId>
     <groupId>org.rapidpm</groupId>
-    <version>01.00.02-RPM</version>
+    <version>01.00.03-RPM-SNAPSHOT</version>
   </parent>
   <modelVersion>4.0.0</modelVersion>
 
@@ -56,7 +56,7 @@
       <dependency>
         <groupId>org.rapidpm</groupId>
         <artifactId>rapidpm-junit5-ext-servlet-container-bom</artifactId>
-        <version>01.00.02-RPM</version>
+        <version>01.00.03-RPM-SNAPSHOT</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
