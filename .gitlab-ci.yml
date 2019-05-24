@@ -1,0 +1,5 @@
+image: images4javadev/buildpack-adopt:1.8.192-12-scm
+
+job:
+  script:
+  - ./mvnw clean install
