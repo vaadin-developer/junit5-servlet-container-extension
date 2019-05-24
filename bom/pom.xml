@@ -53,6 +53,11 @@
       </dependency>
       <dependency>
         <groupId>org.rapidpm</groupId>
+        <artifactId>rapidpm-junit5-ext-servlet-container-impl-tserver</artifactId>
+        <version>01.00.04-RPM-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+        <groupId>org.rapidpm</groupId>
         <artifactId>rapidpm-junit5-commons</artifactId>
         <version>${rapidpm-junit5-commons.version}</version>
       </dependency>

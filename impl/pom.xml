@@ -33,7 +33,7 @@
     <module>none</module>
     <module>spring-boot-v1</module>
     <module>spring-boot-v2</module>
-    <!--<module>tserver</module>-->
+    <module>tserver</module>
   </modules>
 
 
