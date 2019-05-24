@@ -1,5 +1,6 @@
 /**
  * Copyright © 2017 Sven Ruppert (sven.ruppert@gmail.com)
+ * Copyright 2018 Daniel Nordhoff-Vergien (dve@vergien.net)
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -42,7 +43,51 @@ public class TestSpringBoot2Initializer {
         Scanner scanner = new Scanner(in);) {
       String string = scanner.nextLine();
 
-      assertEquals("Hello World on port " + containerInfo.getPort(), string);
+      assertEquals("Hello World on port " + containerInfo.getPort() + " called 1 times", string);
     }
   }
+  
+  @Test
+  void test_002(ContainerInfo containerInfo) throws MalformedURLException, IOException {
+    try (InputStream in =
+        new URL("http://" + containerInfo.getHost() + ":" + containerInfo.getPort() + "/demo")
+            .openStream();
+        Scanner scanner = new Scanner(in);) {
+      String string = scanner.nextLine();
+
+      assertEquals("Hello World on port " + containerInfo.getPort() + " called 1 times", string);
+    }
+  }
+  @Test
+  void test_003(ContainerInfo containerInfo) throws MalformedURLException, IOException {
+    try (InputStream in =
+        new URL("http://" + containerInfo.getHost() + ":" + containerInfo.getPort() + "/demo")
+            .openStream();
+        Scanner scanner = new Scanner(in);) {
+      String string = scanner.nextLine();
+
+      assertEquals("Hello World on port " + containerInfo.getPort() + " called 1 times", string);
+    }
+  }
+  
+  @Test
+  void test_004(ContainerInfo containerInfo) throws MalformedURLException, IOException {
+    try (InputStream in =
+        new URL("http://" + containerInfo.getHost() + ":" + containerInfo.getPort() + "/demo")
+            .openStream();
+        Scanner scanner = new Scanner(in);) {
+      String string = scanner.nextLine();
+
+      assertEquals("Hello World on port " + containerInfo.getPort() + " called 1 times", string);
+    }
+    
+    try (InputStream in =
+            new URL("http://" + containerInfo.getHost() + ":" + containerInfo.getPort() + "/demo")
+                .openStream();
+            Scanner scanner = new Scanner(in);) {
+          String string = scanner.nextLine();
+
+          assertEquals("Hello World on port " + containerInfo.getPort() + " called 2 times", string);
+        }
+   }
 }

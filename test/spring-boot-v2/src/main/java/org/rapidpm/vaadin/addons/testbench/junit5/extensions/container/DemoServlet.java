@@ -1,5 +1,6 @@
 /**
  * Copyright © 2017 Sven Ruppert (sven.ruppert@gmail.com)
+ * Copyright 2018 Daniel Nordhoff-Vergien (dve@vergien.net)
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -28,14 +29,17 @@ import org.springframework.core.env.Environment;
 
 public class DemoServlet extends GenericServlet {
 
+  private int called = 0;
+
   @Autowired
   private Environment environment;
 
   @Override
   public void service(ServletRequest request, ServletResponse response)
       throws ServletException, IOException {
+    called++;
     response.setContentType("text/plain");
     response.getWriter()
-        .append("Hello World on port " + environment.getProperty("local.server.port"));
+        .append("Hello World on port " + environment.getProperty("local.server.port") + " called " + called + " times");
   }
 }
