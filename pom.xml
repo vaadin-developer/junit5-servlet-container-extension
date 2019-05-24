@@ -85,9 +85,9 @@
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
     <!--Initializer-->
-    <meecrowave.version>1.2.5</meecrowave.version>
-    <spring-boot.version>1.5.19.RELEASE</spring-boot.version>
-    <spring-boot2.version>2.1.2.RELEASE</spring-boot2.version>
+    <meecrowave.version>1.2.7</meecrowave.version>
+    <spring-boot.version>1.5.21.RELEASE</spring-boot.version>
+    <spring-boot2.version>2.1.5.RELEASE</spring-boot2.version>
     <addon-test-helpers.version>2.0</addon-test-helpers.version>
     <javax.servlet-api.version>4.0.1</javax.servlet-api.version>
 
