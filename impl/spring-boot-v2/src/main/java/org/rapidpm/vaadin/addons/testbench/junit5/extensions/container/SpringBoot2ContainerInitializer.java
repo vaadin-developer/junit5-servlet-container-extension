@@ -1,5 +1,6 @@
 /**
  * Copyright © 2017 Sven Ruppert (sven.ruppert@gmail.com)
+ * Copyright 2018 Daniel Nordhoff-Vergien (dve@vergien.nent)
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -54,7 +55,7 @@ public class SpringBoot2ContainerInitializer implements ContainerInitializer, Ha
     }
     storeClass().apply(context).put(SPRING_BOOT2_APP_CLASS, appClass);
 
-    final List arrayList = new ArrayList();
+    final List<String> arrayList = new ArrayList<>();
     Collections.addAll(arrayList, springBootConf.args());
     storeClass().apply(context).put(SPRING_BOOT2_ARGS, arrayList);
 
