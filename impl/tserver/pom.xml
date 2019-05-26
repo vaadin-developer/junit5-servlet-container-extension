@@ -2,7 +2,8 @@
 <!--
 
     Copyright © 2017 Sven Ruppert (sven.ruppert@gmail.com)
-
+    Copyright © 2018 Daniel Nordhoff-Vergien (dve@vergien.net)
+    
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
     You may obtain a copy of the License at
@@ -28,7 +29,6 @@
 
   <artifactId>rapidpm-junit5-ext-servlet-container-impl-tserver</artifactId>
 
-
   <dependencies>
     <dependency>
       <groupId>org.vaadin</groupId>
@@ -37,5 +37,11 @@
       <version>2.1</version>
     </dependency>
   </dependencies>
-
+  
+  <repositories>
+    <repository>
+      <id>vaadin-addons</id>
+      <url>http://maven.vaadin.com/vaadin-addons</url>
+    </repository>
+  </repositories>
 </project>

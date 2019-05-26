@@ -33,7 +33,7 @@ import org.rapidpm.vaadin.addons.testbench.junit5.extensions.container.SpringBoo
 
 @ExtendWith(ServletContainerExtension.class)
 @SpringBoot2Conf(source = DemoApp.class)
-public class TestSpringBoot2Initializer {
+public class TestSpringBoot2Initializer2 {
 
   @Test
   void test_001(ContainerInfo containerInfo) throws MalformedURLException, IOException {

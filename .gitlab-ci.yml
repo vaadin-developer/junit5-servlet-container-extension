@@ -1,0 +1,9 @@
+image: images4javadev/buildpack-adopt:1.8.192-12-scm
+
+variables:
+  MAVEN_OPTS: "-Dmaven.repo.local=/cache/maven.repository"
+  MAVEN_CLI: "--batch-mode"
+  
+build:
+  script:
+  - ./mvnw clean install $MAVEN_CLI
